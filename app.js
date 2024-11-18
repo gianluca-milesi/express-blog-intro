@@ -11,7 +11,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/bacheca", (req, res) => {
-    res.json(posts);
+    res.json({
+        count: posts.length,
+        AllPosts: posts
+    });
 });
 
 
